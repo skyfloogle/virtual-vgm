@@ -951,6 +951,175 @@ c7 0147 fc
 c7 0147 f9
 61 5622
 
+# spam registers
+c7 0142 ff
+c7 0143 06
+c7 0145 40
+c7 0147 a6
+repeat 25
+    c7 0140 80
+    63
+done
+c7 0140 00
+61 5622
+
+c7 0142 ff
+c7 0143 06
+c7 0140 80
+repeat 25
+    c7 0142 ff
+    63
+done
+c7 0140 00
+61 5622
+
+c7 0142 ff
+c7 0143 06
+c7 0140 80
+repeat 25
+    c7 0143 06
+    63
+done
+c7 0140 00
+61 5622
+
+c7 0142 ff
+c7 0143 06
+c7 0140 80
+repeat 25
+    c7 0144 f0
+    63
+done
+c7 0140 00
+61 5622
+
+c7 0142 ff
+c7 0143 06
+c7 0140 80
+repeat 25
+    c7 0145 40
+    63
+done
+c7 0140 00
+61 5622
+
+c7 0142 ff
+c7 0143 06
+c7 0140 80
+repeat 25
+    c7 0146 01
+    63
+done
+c7 0140 00
+61 5622
+
+c7 0142 ff
+c7 0143 06
+c7 0140 80
+repeat 25
+    c7 0147 a6
+    63
+done
+c7 0140 00
+61 5622
+
+# set up modulation with maxint
+c7 00a0 7f
+c7 00a1 7f
+c7 00a2 7f
+c7 00a3 7f
+c7 00a4 7f
+c7 00a5 7f
+c7 00a6 7f
+c7 00a7 7f
+c7 00a8 7f
+c7 00a9 7f
+c7 00aa 7f
+c7 00ab 7f
+c7 00ac 7f
+c7 00ad 7f
+c7 00ae 7f
+c7 00af 7f
+c7 00b0 7f
+c7 00b1 7f
+c7 00b2 7f
+c7 00b3 7f
+c7 00b4 7f
+c7 00b5 7f
+c7 00b6 7f
+c7 00b7 7f
+c7 00b8 7f
+c7 00b9 7f
+c7 00ba 7f
+c7 00bb 7f
+c7 00bc 7f
+c7 00bd 7f
+c7 00be 7f
+c7 00bf 7f
+
+# try max frequency
+c7 0142 00
+c7 0143 01
+c7 0145 70
+c7 0147 19
+c7 0140 80
+61 5622
+c7 0142 ff
+c7 0143 ff
+61 5622
+c7 0145 00
+61 5622
+c7 0140 00
+61 5622
+
+# set up modulation with minint
+c7 00a0 80
+c7 00a1 80
+c7 00a2 80
+c7 00a3 80
+c7 00a4 80
+c7 00a5 80
+c7 00a6 80
+c7 00a7 80
+c7 00a8 80
+c7 00a9 80
+c7 00aa 80
+c7 00ab 80
+c7 00ac 80
+c7 00ad 80
+c7 00ae 80
+c7 00af 80
+c7 00b0 80
+c7 00b1 80
+c7 00b2 80
+c7 00b3 80
+c7 00b4 80
+c7 00b5 80
+c7 00b6 80
+c7 00b7 80
+c7 00b8 80
+c7 00b9 80
+c7 00ba 80
+c7 00bb 80
+c7 00bc 80
+c7 00bd 80
+c7 00be 80
+c7 00bf 80
+
+# try min frequency
+c7 0142 00
+c7 0143 03
+c7 0145 70
+c7 0140 80
+61 5622
+c7 0142 00
+c7 0143 00
+61 5622
+c7 0145 00
+61 5622
+c7 0140 00
+61 5622
+
 # set up modulation
 c7 00a0 14
 c7 00a1 34
@@ -986,6 +1155,8 @@ c7 00be 99
 c7 00bf 91
 
 # try a few speeds
+c7 0142 00
+c7 0143 01
 c7 0146 00
 c7 0145 00
 c7 0147 f0
@@ -1017,6 +1188,8 @@ c7 0140 00
 61 5622
 
 # try without looping, see what resets it
+c7 0142 00
+c7 0143 05
 c7 0147 00
 c7 0140 80
 61 5622
@@ -1032,6 +1205,144 @@ c7 0147 70
 c7 0142 00
 61 5622
 c7 0143 05
+61 5622
+c7 0140 00
+61 ac44
+
+# loop then unloop then loop
+c7 0145 70
+c7 0140 80
+61 5622
+# change pitch so we know the unloop bit started
+c7 0142 ff
+c7 0145 04
+c7 0145 50
+61 5622
+c7 0145 70
+61 5622
+c7 0140 00
+61 5622
+
+# loop but very quickly unloop, the cycle should finish
+c7 0140 80
+63
+c7 0145 50
+61 5622
+c7 0140 00
+61 5622
+
+# don't modulate then unloop
+c7 0145 00
+c7 0140 80
+61 5622
+c7 0145 50
+61 5622
+c7 0140 00
+61 ac44
+
+# spam registers
+c7 0142 ff
+c7 0145 04
+c7 0146 00
+c7 0145 70
+c7 0147 90
+repeat 25
+    c7 0140 80
+    63
+done
+c7 0140 00
+61 5622
+
+c7 0140 80
+repeat 25
+    c7 0142 ff
+    63
+done
+c7 0140 00
+61 5622
+
+c7 0140 80
+repeat 25
+    c7 0143 04
+    63
+done
+c7 0140 00
+61 5622
+
+c7 0140 80
+repeat 25
+    c7 0144 f0
+    63
+done
+c7 0140 00
+61 5622
+
+c7 0140 80
+repeat 25
+    c7 0145 70
+    63
+done
+c7 0140 00
+61 5622
+
+c7 0140 80
+repeat 25
+    c7 0147 90
+    63
+done
+c7 0140 00
+61 ac44
+
+# modulation then sweep then modulation
+c7 0147 95
+c7 0140 80
+61 5622
+c7 0145 50
+61 5622
+c7 0145 70
+61 5622
+c7 0140 00
+61 5622
+
+c7 0145 40
+c7 0140 80
+61 5622
+c7 0145 70
+61 5622
+c7 0145 40
+61 5622
+c7 0140 80
+61 5622
+c7 0145 70
+61 5622
+c7 0145 40
+61 5622
+c7 0140 80
+61 5622
+c7 0145 50
+61 5622
+c7 0145 40
+61 5622
+c7 0145 50
+61 5622
+c7 0140 00
+61 5622
+
+# modulate then quickly sweep
+c7 0145 70
+c7 0147 95
+c7 0140 80
+63
+c7 0145 40
+61 5622
+c7 0140 00
+61 5622
+
+# sweep then quickly unlooped modulate
+c7 0145 40
+c7 0140 80
+63
+c7 0145 50
 61 5622
 c7 0140 00
 61 ac44
