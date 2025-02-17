@@ -814,6 +814,29 @@ c7 0100 80
 c7 0100 00
 61 5622
 
+# overwriting wave while noise is playing
+c7 0151 ff
+c7 0152 00
+c7 0153 06
+c7 0154 f0
+c7 0155 00
+c7 0150 80
+63
+c7 0090 ff
+c7 0091 ff
+c7 0092 ff
+c7 0093 ff
+c7 0094 ff
+c7 0095 ff
+c7 0096 ff
+c7 0097 ff
+61 2b11
+c7 0150 00
+c7 0100 80
+61 2b11
+c7 0100 00
+61 ac44
+
 # set up channel 5
 c7 0141 ff
 c7 0142 9d
@@ -1173,7 +1196,7 @@ c7 0147 70
 61 ac44
 c7 0147 10
 61 ac44
-c7 0147 00
+c7 0147 80
 61 ac44
 c7 0140 00
 61 ac44
@@ -1234,6 +1257,20 @@ c7 0140 00
 # don't modulate then unloop
 c7 0145 00
 c7 0140 80
+61 5622
+c7 0145 50
+61 5622
+c7 0140 00
+61 ac44
+
+# halt modulation, then unloop, then try to sweep
+c7 0145 50
+c7 0147 00
+c7 0140 80
+61 5622
+c7 0147 70
+61 5622
+c7 0145 00
 61 5622
 c7 0145 50
 61 5622
