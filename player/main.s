@@ -1,5 +1,5 @@
 !ORG 0xfffff000
-!SEEK 0x168
+!SEEK 0x164
 
 !ALIAS r11, hw_regs
 !ALIAS r12, vip_regs

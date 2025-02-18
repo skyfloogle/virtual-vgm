@@ -138,4 +138,7 @@ ui:
     cmp r0, r6
     bne .timer_loop
 
+    ; disable timer for the first note
+    st.b r0, 0x20[hw_regs]
+
     reti
