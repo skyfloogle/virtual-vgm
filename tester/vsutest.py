@@ -1277,6 +1277,23 @@ c7 0145 50
 c7 0140 00
 61 ac44
 
+# unloop then fadeout
+c7 0140 80
+61 5622
+c7 0145 51
+61 ac44
+
+# fadeout then unloop
+c7 0144 80
+c7 0145 01
+c7 0140 80
+61 5622
+c7 0144 f0
+c7 0145 51
+61 5622
+c7 0140 00
+61 5622
+
 # spam registers
 c7 0142 ff
 c7 0145 04
