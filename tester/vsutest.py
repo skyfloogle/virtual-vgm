@@ -1144,38 +1144,38 @@ c7 0140 00
 61 5622
 
 # set up modulation
-c7 00a0 14
-c7 00a1 34
-c7 00a2 34
-c7 00a3 50
-c7 00a4 70
-c7 00a5 7c
-c7 00a6 a0
-c7 00a7 bc
-c7 00a8 e0
-c7 00a9 1d
-c7 00aa 3d
-c7 00ab 55
-c7 00ac 69
-c7 00ad 75
-c7 00ae 7d
-c7 00af 85
-c7 00b0 85
-c7 00b1 95
-c7 00b2 99
-c7 00b3 a5
-c7 00b4 b1
-c7 00b5 b5
-c7 00b6 bd
-c7 00b7 c1
-c7 00b8 c1
-c7 00b9 c1
-c7 00ba c1
-c7 00bb c1
-c7 00bc bd
-c7 00bd b5
-c7 00be 99
-c7 00bf 91
+c7 00a0 80
+c7 00a1 88
+c7 00a2 90
+c7 00a3 98
+c7 00a4 a0
+c7 00a5 a8
+c7 00a6 b0
+c7 00a7 b8
+c7 00a8 c0
+c7 00a9 c8
+c7 00aa d0
+c7 00ab d8
+c7 00ac e0
+c7 00ad e8
+c7 00ae f0
+c7 00af f8
+c7 00b0 00
+c7 00b1 08
+c7 00b2 10
+c7 00b3 18
+c7 00b4 20
+c7 00b5 28
+c7 00b6 30
+c7 00b7 38
+c7 00b8 40
+c7 00b9 48
+c7 00ba 50
+c7 00bb 58
+c7 00bc 60
+c7 00bd 78
+c7 00be 00
+c7 00bf 80
 
 # try a few speeds
 c7 0142 00
@@ -1358,6 +1358,7 @@ c7 0145 70
 c7 0140 00
 61 5622
 
+# moduation/sweep combinations
 c7 0145 40
 c7 0140 80
 61 5622
