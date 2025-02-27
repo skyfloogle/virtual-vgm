@@ -1084,13 +1084,94 @@ c7 00bf 7f
 c7 0142 00
 c7 0143 01
 c7 0145 70
+c7 0146 00
 c7 0147 19
 c7 0140 80
 61 5622
 c7 0142 ff
 c7 0143 ff
+c7 01ff 00
 61 5622
 c7 0145 00
+61 5622
+c7 0140 00
+61 5622
+
+# change first offset
+c7 00a0 80
+
+# start with modulation
+c7 0142 00
+c7 0143 05
+c7 0147 f0
+c7 0145 00
+61 5622
+c7 0145 70
+c7 0140 80
+61 5622
+c7 0140 00
+61 5622
+
+# start without changing frequency
+c7 0140 80
+61 5622
+c7 0140 00
+61 5622
+
+# show without modulation for a bit
+c7 0145 00
+c7 0140 80
+61 5622
+c7 0142 00
+61 5622
+c7 0140 00
+c7 0145 70
+61 5622
+
+# start after changing frequency
+c7 0142 80
+c7 0140 80
+61 5622
+c7 0140 00
+61 5622
+
+# start after rewriting same frequency
+c7 0142 80
+c7 0140 80
+61 5622
+c7 0140 00
+61 5622
+
+# show without modulation for a bit
+c7 0145 00
+c7 0140 80
+61 5622
+c7 0142 80
+61 5622
+c7 0140 00
+c7 0145 70
+61 5622
+
+# rewrite frequency then start after
+c7 0142 00
+61 5622
+c7 0140 80
+61 5622
+c7 0140 00
+61 5622
+
+# change high byte
+c7 0143 06
+c7 0140 80
+61 5622
+c7 0140 00
+61 5622
+
+# change frequency and start, mid-speed
+c7 0143 05
+c7 0142 80
+c7 0147 70
+c7 0140 80
 61 5622
 c7 0140 00
 61 5622
@@ -1145,37 +1226,37 @@ c7 0140 00
 
 # set up modulation
 c7 00a0 80
-c7 00a1 88
-c7 00a2 90
-c7 00a3 98
-c7 00a4 a0
-c7 00a5 a8
-c7 00a6 b0
-c7 00a7 b8
-c7 00a8 c0
-c7 00a9 c8
-c7 00aa d0
-c7 00ab d8
-c7 00ac e0
-c7 00ad e8
-c7 00ae f0
-c7 00af f8
-c7 00b0 00
-c7 00b1 08
-c7 00b2 10
-c7 00b3 18
-c7 00b4 20
-c7 00b5 28
-c7 00b6 30
-c7 00b7 38
-c7 00b8 40
-c7 00b9 48
-c7 00ba 50
-c7 00bb 58
-c7 00bc 60
-c7 00bd 78
+c7 00a1 90
+c7 00a2 a0
+c7 00a3 b0
+c7 00a4 c0
+c7 00a5 d0
+c7 00a6 e0
+c7 00a7 f0
+c7 00a8 00
+c7 00a9 10
+c7 00aa 20
+c7 00ab 30
+c7 00ac 40
+c7 00ad 50
+c7 00ae 60
+c7 00af 70
+c7 00b0 7f
+c7 00b1 7f
+c7 00b2 7f
+c7 00b3 7f
+c7 00b4 7f
+c7 00b5 7f
+c7 00b6 7f
+c7 00b7 7f
+c7 00b8 7f
+c7 00b9 7f
+c7 00ba 7f
+c7 00bb 7f
+c7 00bc 7f
+c7 00bd 40
 c7 00be 00
-c7 00bf 80
+c7 00bf c0
 
 # try a few speeds
 c7 0142 00
@@ -1201,11 +1282,23 @@ c7 0147 80
 c7 0140 00
 61 ac44
 
-# move pitch
+# move pitch, triggering the byte locking bug
 c7 0147 90
+c7 0142 00
+c7 0143 01
 c7 0140 80
 61 5622
 c7 0143 05
+61 5622
+c7 0142 00
+61 5622
+c7 0000 00
+61 5622
+c7 0142 ff
+61 5622
+c7 0142 80
+61 5622
+c7 01ff 00
 61 5622
 c7 0140 00
 61 5622
@@ -1238,7 +1331,6 @@ c7 0140 80
 61 5622
 # change pitch so we know the unloop bit started
 c7 0142 ff
-c7 0145 04
 c7 0145 50
 61 5622
 c7 0145 70
