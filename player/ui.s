@@ -139,6 +139,7 @@ ui:
     bne .timer_loop
 
     ; disable timer for the first note
-    st.b r0, 0x20[hw_regs]
+    mov -16, r6
+    st.b r6, 0x20[hw_regs]
 
     reti
